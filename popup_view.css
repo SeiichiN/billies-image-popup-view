@@ -9,24 +9,33 @@ main,
   /* min-height: 1000px; */
 }
 
-
-
 .image-large-area {
   display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 95;
+}
+
+.image-area-bg {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  /* right: -200px;
-     bottom: -470px; */
-  width: 800px;
-  height: 800px;
+  width: 80%;
+  height: 80%;
   background-color: #fff;
-  z-index: 999;
+  z-index: 96;
   padding: 10px;
 }
 
+#image-large,
+#image-large img {
+  pointer-events: none;
+}
 
-/* 修正時刻: Fri Aug  6 21:57:20 2021 */
+
+/* 修正時刻: Fri Aug  6 22:55:40 2021 */

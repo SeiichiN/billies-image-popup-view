@@ -3,10 +3,6 @@
 'use strict';
 
 $( () => {
-  var i, imgs, imgcap,
-      eles, imageLargeEle, targetFigcap, targetImg,
-      setClick, image_area, body_area, setImageClick;
-
   const html_txt = String()
              + '<div class="image-large-area">'
              +   '<div class="image-area-bg">'
@@ -22,9 +18,17 @@ $( () => {
     const img_alt = e.target.alt
     const img_html = '<img src="' + img_src + '" alt="' + img_alt + '">'
     $('#image-large').prepend(img_html)
-    $('.image-large-area').css('display', 'block').fadeIn()
+    $('.image-large-area').fadeIn()
+    return false;
+  })
+
+  $('.image-area-bg').on('click', () => {
+    console.log('CLICK!')
+    $('.image-large-area').fadeOut()
+    $('.image-large-area').remove()
+    return false;
   })
 
 });
 
-// 修正時刻: Fri Aug  6 22:15:28 2021
+// 修正時刻: Fri Aug  6 23:00:31 2021
