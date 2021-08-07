@@ -22,8 +22,16 @@ $( () => {
     // console.log($('.image-large img')[0].height)
     const height = $('.image-large img')[0].height + 20
     const width = $('.image-large img')[0].width + 20
-    $('.image-area-bg').css('width', width)
-    $('.image-area-bg').css('height', height)
+    const ratio = height / width 
+    const w_height = $(window).height()
+    const w_width = $(window).width()
+    if (w_width > width) {
+      $('.image-area-bg').css('width', width)
+      $('.image-area-bg').css('height', height)
+    } else {
+      $('.image-area-bg').css('width', w_width * 0.8)
+      $('.image-area-bg').css('height', w_width * 0.8 * ratio)
+    }
     $('.image-large-area').fadeIn()
     setBgClick()
     return false
@@ -41,4 +49,4 @@ $( () => {
 
 })
 
-// 修正時刻: Sat Aug  7 09:22:28 2021
+// 修正時刻: Sat Aug  7 11:25:34 2021
