@@ -1,14 +1,5 @@
 @charset "utf-8";
 
-body {
-  /* background-color: rgba(0, 0, 0, 0.8); */
-}
-
-main,
-.entry-cotent {
-  /* min-height: 1000px; */
-}
-
 .image-large-area {
   display: none;
   position: absolute;
@@ -32,10 +23,10 @@ main,
   padding: 10px;
 }
 
-#image-large,
-#image-large img {
+.image-large,
+.image-large img {
   pointer-events: none;
 }
 
 
-/* 修正時刻: Fri Aug  6 22:55:40 2021 */
+/* 修正時刻: Sat Aug  7 08:37:42 2021 */
