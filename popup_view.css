@@ -28,5 +28,9 @@
   pointer-events: none;
 }
 
+.blocks-gallery-item__caption {
+  pointer-events: none;
+}
 
-/* 修正時刻: Sat Aug  7 11:26:43 2021 */
+
+/* 修正時刻: Sun Aug 15 10:03:25 2021 */

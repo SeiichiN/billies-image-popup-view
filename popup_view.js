@@ -20,15 +20,20 @@ $( () => {
     $('.image-large').prepend(img_html)
     // console.log($('.image-large')[0])
     // console.log($('.image-large img')[0].height)
+    // クリックした画像の高さに20px(白枠10px * 2)部分を足したものを height とする。
     const height = $('.image-large img')[0].height + 20
+    // 同様に白枠20px分を足したものを width とする。
     const width = $('.image-large img')[0].width + 20
     const ratio = height / width 
     const w_height = $(window).height()
     const w_width = $(window).width()
+    // 画像よりもウィンドウが大きい場合は、画像をそのままの大きさで表示する。
     if (w_width > width) {
       $('.image-area-bg').css('width', width)
       $('.image-area-bg').css('height', height)
-    } else {
+    }
+    // 画像の方が大きい場合は、その画像の大きさをウィンドウの8割とする。
+    else {
       $('.image-area-bg').css('width', w_width * 0.8)
       $('.image-area-bg').css('height', w_width * 0.8 * ratio)
     }
@@ -37,6 +42,7 @@ $( () => {
     return false
   })
 
+  // 画像+白枠部分をクリックすると、フェードアウトする。
   const setBgClick = () => {
     $('.image-area-bg').on('click', () => {
       $('.image-large-area').fadeOut()
@@ -49,4 +55,4 @@ $( () => {
 
 })
 
-// 修正時刻: Sat Aug  7 11:25:34 2021
+// 修正時刻: Sun Aug 15 09:50:38 2021

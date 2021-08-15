@@ -20,20 +20,22 @@ add_action('wp_enqueue_scripts', 'billies_image_popup_view_addfiles');
 /**
  * 画面出力
  */
+/*
 function popup_dispImage() {
 	ob_start();
-?>
-  <div class="image-large-area">
+*/ ?>
+<!-- <div class="image-large-area">
 
-      <figure id="image-large">
-	    <figcaption id="figcap"></figcaption>
-      </figure>
+     <figure id="image-large">
+	 <figcaption id="figcap"></figcaption>
+     </figure>
 
-  </div>
+     </div> -->
 <?php
-	return ob_get_clean();
+/*
+return ob_get_clean();
 }
 add_shortcode('insert_billies_image_popup_view', 'popup_dispImage');
+*/
 
-
-/* 修正時刻: Fri Aug  6 15:39:39 2021 */
+/* 修正時刻: Sun Aug 15 09:53:10 2021 */
