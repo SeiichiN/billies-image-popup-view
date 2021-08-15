@@ -3,7 +3,7 @@
  * @wordpress-plugin
  * Plugin Name: Billies Image Popup View
  * Description: Thumbnail images viewer. Shortcode is "[insert_billies_image_popup_view]". 大きな画像を表示したい箇所で、ショートコードを貼り付けてください。
- * Version: 0.1
+ * Version: 0.4
  * Author: Seiichi Nukayama
  * Author URI: http://www.billies-works.com/
  */
@@ -20,22 +20,25 @@ add_action('wp_enqueue_scripts', 'billies_image_popup_view_addfiles');
 /**
  * 画面出力
  */
-/*
+
 function popup_dispImage() {
 	ob_start();
-*/ ?>
-<!-- <div class="image-large-area">
+?>
+<div></div>
+<!--
+<div class="image-large-area">
 
-     <figure id="image-large">
+ <figure id="image-large">
 	 <figcaption id="figcap"></figcaption>
-     </figure>
+ </figure>
 
-     </div> -->
+</div>
+-->
 <?php
-/*
+
 return ob_get_clean();
 }
 add_shortcode('insert_billies_image_popup_view', 'popup_dispImage');
-*/
 
-/* 修正時刻: Sun Aug 15 09:53:10 2021 */
+
+/* 修正時刻: Sun Aug 15 12:07:25 2021 */

@@ -3,6 +3,17 @@
 'use strict';
 
 $( () => {
+  const mypreload = (imgSrc) => {
+      $('<img>').attr('src', imgSrc)
+  }
+
+  // console.log($('.blocks-gallery-item figure img'))
+  
+  $('.blocks-gallery-item figure img').each((i, e) => {
+    // alert( $(e).attr('data-full-url') )
+    mypreload( $(e).attr('data-full-url') )
+  })
+  
   const html_txt = String()
              + '<div class="image-large-area">'
              +   '<div class="image-area-bg">'
@@ -55,4 +66,4 @@ $( () => {
 
 })
 
-// 修正時刻: Sun Aug 15 09:50:38 2021
+// 修正時刻: Sun Aug 15 21:48:32 2021
